@@ -30,8 +30,9 @@ export function Navigation() {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex flex-col">
-          <a href="#" className="font-headline text-2xl md:text-3xl font-bold text-white tracking-tight">
-            LEGACY <span className="text-gold">LAKESIDE</span>
+          <a href="#" className="font-headline text-xl md:text-2xl font-bold text-white tracking-tight leading-tight">
+            LEGACY <span className="text-gold">GRILL & BAR</span>
+            <span className="block text-[10px] uppercase tracking-[0.3em] font-light text-white/60">By the Lake</span>
           </a>
           <LiveStatus />
         </div>

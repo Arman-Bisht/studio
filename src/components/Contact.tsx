@@ -11,13 +11,13 @@ export function Contact() {
               <span className="text-gold font-bold uppercase tracking-[0.4em] text-sm block mb-4">Location</span>
               <h2 className="font-headline text-4xl md:text-5xl text-navy mb-8">Visit the Legacy</h2>
               <p className="text-navy/70 max-w-md">
-                Find us at the edge of serenity. We are located on the northern shore of the lake, offering the most spectacular sunset views in the region.
+                Experience the finest dining in Oklahoma City. Located right by the water, we offer a unique atmosphere where great food meets unrivaled views.
               </p>
             </div>
 
             <div className="space-y-6">
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=Legacy+Grill+and+Bar+by+The+Lake" 
+                href="https://www.google.com/maps/place/Legacy+Grill+and+Bar+by+The+Lake/@35.5636577,-97.6201623,17z" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 group"
@@ -27,20 +27,20 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-navy uppercase tracking-widest text-sm mb-1">Our Address</h4>
-                  <p className="text-navy/60 group-hover:text-navy transition-colors">1200 Shoreline Drive, <br />Lakeside Springs, LS 45012</p>
+                  <p className="text-navy/60 group-hover:text-navy transition-colors">12200 N MacArthur Blvd, <br />Oklahoma City, OK 73162</p>
                 </div>
               </a>
 
               <a 
-                href="tel:+15551234567" 
+                href="tel:+14056074220" 
                 className="flex items-start gap-4 group"
               >
                 <div className="bg-navy p-3 text-gold group-hover:bg-gold group-hover:text-navy transition-colors">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy uppercase tracking-widest text-sm mb-1">Reservations</h4>
-                  <p className="text-navy/60 group-hover:text-navy transition-colors">(555) 123-4567</p>
+                  <h4 className="font-bold text-navy uppercase tracking-widest text-sm mb-1">Call Us</h4>
+                  <p className="text-navy/60 group-hover:text-navy transition-colors">(405) 607-4220</p>
                 </div>
               </a>
 
@@ -50,8 +50,9 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-navy uppercase tracking-widest text-sm mb-1">Service Hours</h4>
-                  <p className="text-navy/60">Daily: 11:00 AM — 10:00 PM</p>
-                  <p className="text-navy/40 text-xs italic mt-1">Bar remains open until late on weekends.</p>
+                  <p className="text-navy/60">Mon - Thu: 11:00 AM — 9:00 PM</p>
+                  <p className="text-navy/60">Fri - Sat: 11:00 AM — 10:00 PM</p>
+                  <p className="text-navy/60">Sun: 11:00 AM — 9:00 PM</p>
                 </div>
               </div>
             </div>
@@ -59,7 +60,7 @@ export function Contact() {
 
           <div className="relative h-[400px] lg:h-full bg-navy/5 overflow-hidden group">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.2922926156743895!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1647525350000!5m2!1sen!2sfr" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.6015560447!2d-97.6227372!3d35.5636577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b205f3b80f54fd%3A0x37ab1b507e3f3b3e!2sLegacy%20Grill%20and%20Bar%20by%20The%20Lake!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

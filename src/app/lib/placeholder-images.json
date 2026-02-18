@@ -3,45 +3,45 @@
   "placeholderImages": [
     {
       "id": "hero-lake",
-      "description": "Scenic sunset view over a peaceful lake with a wooden pier.",
-      "imageUrl": "https://picsum.photos/seed/lake1/1920/1080",
+      "description": "Breathtaking sunset view over the lake from the restaurant patio.",
+      "imageUrl": "https://picsum.photos/seed/legacy-lake/1920/1080",
       "imageHint": "lake sunset"
     },
     {
-      "id": "steak-gourmet",
-      "description": "Perfectly seared filet mignon with rosemary and garlic.",
-      "imageUrl": "https://picsum.photos/seed/steak1/800/600",
+      "id": "burger-gourmet",
+      "description": "Signature gourmet burger with melted cheese and fresh toppings.",
+      "imageUrl": "https://picsum.photos/seed/legacy-burger/800/600",
+      "imageHint": "gourmet burger"
+    },
+    {
+      "id": "steak-prime",
+      "description": "Prime cut steak grilled to perfection with seasonal sides.",
+      "imageUrl": "https://picsum.photos/seed/legacy-steak/800/600",
       "imageHint": "grilled steak"
     },
     {
-      "id": "salmon-fresh",
-      "description": "Grilled salmon fillet with lemon and asparagus.",
-      "imageUrl": "https://picsum.photos/seed/fish1/800/600",
-      "imageHint": "grilled salmon"
-    },
-    {
-      "id": "cocktail-gold",
-      "description": "Elegant craft cocktail with a gold rim and orange peel garnish.",
-      "imageUrl": "https://picsum.photos/seed/drink1/800/600",
+      "id": "cocktail-patio",
+      "description": "Refreshing craft cocktail served on the lakeside patio.",
+      "imageUrl": "https://picsum.photos/seed/legacy-drink/800/600",
       "imageHint": "craft cocktail"
     },
     {
-      "id": "dessert-chocolate",
-      "description": "Rich chocolate lava cake with vanilla bean ice cream.",
-      "imageUrl": "https://picsum.photos/seed/sweet1/800/600",
+      "id": "dessert-sweet",
+      "description": "Decadent signature dessert with elegant plating.",
+      "imageUrl": "https://picsum.photos/seed/legacy-sweet/800/600",
       "imageHint": "chocolate dessert"
     },
     {
-      "id": "restaurant-interior",
-      "description": "Upscale restaurant interior with navy walls and gold accents.",
-      "imageUrl": "https://picsum.photos/seed/interior1/1200/800",
-      "imageHint": "restaurant interior"
+      "id": "restaurant-exterior",
+      "description": "The welcoming entrance of Legacy Grill and Bar by the Lake.",
+      "imageUrl": "https://picsum.photos/seed/legacy-exterior/1200/800",
+      "imageHint": "restaurant exterior"
     },
     {
-      "id": "lake-terrace",
-      "description": "Outdoor dining terrace overlooking the water at dusk.",
-      "imageUrl": "https://picsum.photos/seed/terrace1/1200/800",
-      "imageHint": "outdoor dining"
+      "id": "patio-view",
+      "description": "Outdoor seating area with panoramic views of the water.",
+      "imageUrl": "https://picsum.photos/seed/legacy-patio/1200/800",
+      "imageHint": "lakeside patio"
     }
   ]
 }
