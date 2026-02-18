@@ -5,10 +5,12 @@ import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { LiveStatus } from "./LiveStatus"
 import { MenuModal } from "./MenuModal"
+import { Phone } from "lucide-react"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const phoneNumber = "+15805007527"
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -38,34 +40,55 @@ export function Navigation() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+        <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-8 mr-4 border-r border-white/10 pr-8">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href}
+                className="text-white hover:text-gold transition-colors text-sm font-medium tracking-widest uppercase"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+          
+          <div className="flex items-center gap-4">
             <a 
-              key={link.name} 
-              href={link.href}
-              className="text-white hover:text-gold transition-colors text-sm font-medium tracking-widest uppercase"
+              href={`tel:${phoneNumber}`}
+              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-2 text-xs font-bold uppercase tracking-widest border border-white/20 transition-all"
             >
-              {link.name}
+              <Phone size={14} className="text-gold" />
+              Call to Order
             </a>
-          ))}
-          <MenuModal trigger={
-            <button className="gold-glow bg-gold text-navy px-6 py-2 text-sm font-bold uppercase tracking-widest">
-              View Menu
-            </button>
-          } />
+            <MenuModal trigger={
+              <button className="gold-glow bg-gold text-navy px-6 py-2 text-sm font-bold uppercase tracking-widest">
+                View Menu
+              </button>
+            } />
+          </div>
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className={cn("md:hidden text-white p-2", isOpen && "hamburger-active")}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div className="space-y-1.5">
-            <div className="hamburger-line line-1"></div>
-            <div className="hamburger-line line-2"></div>
-            <div className="hamburger-line line-3"></div>
-          </div>
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <a 
+            href={`tel:${phoneNumber}`}
+            className="p-2 text-gold border border-gold/20 rounded-full"
+            aria-label="Call to order"
+          >
+            <Phone size={20} />
+          </a>
+          <button 
+            className={cn("text-white p-2", isOpen && "hamburger-active")}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className="space-y-1.5">
+              <div className="hamburger-line line-1"></div>
+              <div className="hamburger-line line-2"></div>
+              <div className="hamburger-line line-3"></div>
+            </div>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -83,11 +106,20 @@ export function Navigation() {
             {link.name}
           </a>
         ))}
-        <MenuModal trigger={
-          <button className="gold-glow bg-gold text-navy px-10 py-4 text-lg font-bold uppercase tracking-widest mt-4">
-            View Menu
-          </button>
-        } />
+        <div className="flex flex-col gap-4 w-full px-12 mt-4">
+          <a 
+            href={`tel:${phoneNumber}`}
+            className="flex items-center justify-center gap-3 bg-white/5 border border-white/20 text-white px-10 py-4 text-sm font-bold uppercase tracking-widest"
+          >
+            <Phone size={18} className="text-gold" />
+            Call to Order
+          </a>
+          <MenuModal trigger={
+            <button className="gold-glow bg-gold text-navy px-10 py-4 text-sm font-bold uppercase tracking-widest">
+              View Menu
+            </button>
+          } />
+        </div>
       </div>
     </nav>
   )
