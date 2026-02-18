@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { LiveStatus } from "./LiveStatus"
 import { MenuModal } from "./MenuModal"
-import { Phone } from "lucide-react"
+import { Phone, Menu, X } from "lucide-react"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,16 +27,18 @@ export function Navigation() {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-6 md:px-12",
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-4 md:px-12",
       scrolled ? "nav-blur shadow-lg py-2" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex flex-col">
-          <a href="#" className="font-headline text-xl md:text-2xl font-bold text-white tracking-tight leading-tight">
+          <a href="#" className="font-headline text-lg md:text-2xl font-bold text-white tracking-tight leading-tight">
             LEGACY <span className="text-gold">GRILL & BAR</span>
-            <span className="block text-[10px] uppercase tracking-[0.3em] font-light text-white/60">By the Lake</span>
+            <span className="block text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] font-light text-white/60">By the Lake</span>
           </a>
-          <LiveStatus />
+          <div className="mt-0.5">
+            <LiveStatus />
+          </div>
         </div>
 
         {/* Desktop Nav */}
@@ -70,43 +72,40 @@ export function Navigation() {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-3 md:hidden">
           <a 
             href={`tel:${phoneNumber}`}
-            className="p-2 text-gold border border-gold/20 rounded-full"
-            aria-label="Call to order"
+            className="flex items-center gap-2 bg-gold text-navy px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-sm"
           >
-            <Phone size={20} />
+            <Phone size={12} />
+            Call
           </a>
           <button 
-            className={cn("text-white p-2", isOpen && "hamburger-active")}
+            className="text-white p-1"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
-            <div className="space-y-1.5">
-              <div className="hamburger-line line-1"></div>
-              <div className="hamburger-line line-2"></div>
-              <div className="hamburger-line line-3"></div>
-            </div>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       <div className={cn(
-        "fixed inset-0 bg-navy h-screen transition-transform duration-500 ease-in-out z-[-1] flex flex-col items-center justify-center gap-8",
-        isOpen ? "translate-x-0" : "translate-x-full"
+        "fixed inset-0 bg-navy h-screen transition-all duration-500 ease-in-out z-[-1] flex flex-col items-center justify-center gap-8 px-6",
+        isOpen ? "opacity-100 pointer-events-auto visible" : "opacity-0 pointer-events-none invisible"
       )}>
         {navLinks.map((link) => (
           <a 
             key={link.name} 
             href={link.href}
             onClick={() => setIsOpen(false)}
-            className="text-white text-3xl font-headline hover:text-gold transition-colors"
+            className="text-white text-3xl font-headline hover:text-gold transition-colors text-center"
           >
             {link.name}
           </a>
         ))}
-        <div className="flex flex-col gap-4 w-full px-12 mt-4">
+        <div className="flex flex-col gap-4 w-full max-w-xs mt-4">
           <a 
             href={`tel:${phoneNumber}`}
             className="flex items-center justify-center gap-3 bg-white/5 border border-white/20 text-white px-10 py-4 text-sm font-bold uppercase tracking-widest"
@@ -115,7 +114,7 @@ export function Navigation() {
             Call to Order
           </a>
           <MenuModal trigger={
-            <button className="gold-glow bg-gold text-navy px-10 py-4 text-sm font-bold uppercase tracking-widest">
+            <button className="gold-glow bg-gold text-navy px-10 py-4 text-sm font-bold uppercase tracking-widest w-full">
               View Menu
             </button>
           } />
