@@ -2,12 +2,12 @@
 import Image from "next/image"
 
 const GALLERY_IMAGES = [
-  { id: 1, src: "https://picsum.photos/seed/lake1/800/800", hint: "lake view" },
-  { id: 2, src: "https://picsum.photos/seed/steak1/800/800", hint: "grilled steak" },
-  { id: 3, src: "https://picsum.photos/seed/fish1/800/800", hint: "grilled salmon" },
-  { id: 4, src: "https://picsum.photos/seed/drink1/800/800", hint: "craft cocktail" },
-  { id: 5, src: "https://picsum.photos/seed/interior1/800/800", hint: "restaurant interior" },
-  { id: 6, src: "https://picsum.photos/seed/terrace1/800/800", hint: "outdoor dining" },
+  { id: 1, src: "/Legacy1.png", hint: "Legacy Grill and Bar" },
+  { id: 2, src: "/Legacy2.png", hint: "Legacy Grill and Bar" },
+  { id: 3, src: "/Legacy3.png", hint: "Legacy Grill and Bar" },
+  { id: 4, src: "/Legacy4.png", hint: "Legacy Grill and Bar" },
+  { id: 5, src: "/Legacy5.png", hint: "Legacy Grill and Bar" },
+  { id: 6, src: "/Legacy6.jpg", hint: "Legacy Grill and Bar" },
 ]
 
 export function Gallery() {
