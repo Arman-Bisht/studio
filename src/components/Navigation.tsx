@@ -31,12 +31,12 @@ export function Navigation() {
       scrolled ? "nav-blur shadow-lg py-2" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-2">
           <a href="#" className="font-headline text-lg md:text-2xl font-bold text-white tracking-tight leading-tight">
             LEGACY <span className="text-gold">GRILL & BAR</span>
             <span className="block text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] font-light text-white/60">By the Lake</span>
           </a>
-          <div className="mt-0.5">
+          <div className="flex">
             <LiveStatus />
           </div>
         </div>
@@ -58,13 +58,13 @@ export function Navigation() {
           <div className="flex items-center gap-4">
             <a 
               href={`tel:${phoneNumber}`}
-              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-2 text-xs font-bold uppercase tracking-widest border border-white/20 transition-all"
+              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 text-xs font-bold uppercase tracking-widest border border-white/20 transition-all"
             >
               <Phone size={14} className="text-gold" />
               Call to Order
             </a>
             <MenuModal trigger={
-              <button className="gold-glow bg-gold text-navy px-6 py-2 text-sm font-bold uppercase tracking-widest">
+              <button className="gold-glow bg-gold text-navy px-6 py-2.5 text-sm font-bold uppercase tracking-widest">
                 View Menu
               </button>
             } />
