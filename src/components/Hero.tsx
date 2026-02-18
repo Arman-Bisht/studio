@@ -1,8 +1,9 @@
-
 import Image from "next/image"
 import { MenuModal } from "./MenuModal"
 
 export function Hero() {
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=9146+N+MacArthur+Blvd+Oklahoma+City+OK+73132"
+
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -33,8 +34,10 @@ export function Hero() {
             </button>
           } />
           <a 
-            href="#contact" 
-            className="border border-white/50 text-white hover:bg-white hover:text-navy px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] transition-all duration-300 w-full sm:w-auto"
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white/50 text-white hover:bg-white hover:text-navy px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] transition-all duration-300 w-full sm:w-auto text-center"
           >
             Find Our Location
           </a>
