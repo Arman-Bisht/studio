@@ -17,7 +17,7 @@ export function Contact() {
 
             <div className="space-y-6">
               <a 
-                href="https://www.google.com/maps/place/Legacy+Grill+and+Bar+by+The+Lake/@35.5636577,-97.6201623,17z" 
+                href="https://www.google.com/maps/search/9146+N+Macarthur+Blvd+Okc,+ok+73132" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 group"
@@ -27,7 +27,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-navy uppercase tracking-widest text-sm mb-1">Our Address</h4>
-                  <p className="text-navy/60 group-hover:text-navy transition-colors">12200 N MacArthur Blvd, <br />Oklahoma City, OK 73162</p>
+                  <p className="text-navy/60 group-hover:text-navy transition-colors">9146 N MacArthur Blvd, <br />Oklahoma City, OK 73132</p>
                 </div>
               </a>
 
@@ -60,7 +60,7 @@ export function Contact() {
 
           <div className="relative h-[400px] lg:h-full bg-navy/5 overflow-hidden group">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.6015560447!2d-97.6227372!3d35.5636577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b205f3b80f54fd%3A0x37ab1b507e3f3b3e!2sLegacy%20Grill%20and%20Bar%20by%20The%20Lake!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.406!2d-97.6227372!3d35.5636577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b205847e0f54fd%3A0x37ab1b507e3f3b3e!2s9146%20N%20MacArthur%20Blvd%2C%20Oklahoma%20City%2C%20OK%2073132!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
