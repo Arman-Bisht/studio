@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
@@ -37,7 +36,7 @@ export function MenuModal({ trigger }: { trigger: React.ReactNode }) {
       <DialogTrigger asChild>
         {trigger}
       </DialogTrigger>
-      <DialogContent className="max-w-4xl w-[95vw] h-[85vh] bg-navy border-gold/40 text-white p-0 overflow-hidden">
+      <DialogContent className="max-w-4xl w-[95vw] h-[85vh] bg-navy border-gold/40 text-white p-0 overflow-hidden ring-0">
         {/* Thematic Background Overlay */}
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
           <Image 
@@ -50,8 +49,8 @@ export function MenuModal({ trigger }: { trigger: React.ReactNode }) {
         </div>
 
         <div className="relative z-10 flex flex-col h-full">
-          <DialogHeader className="p-8 pb-4 text-center border-b border-gold/20">
-            <DialogTitle className="font-headline text-5xl text-gold italic animate-in fade-in slide-in-from-top duration-700">
+          <DialogHeader className="p-8 pb-4 text-center border-b border-gold/20 pr-16">
+            <DialogTitle className="font-headline text-4xl md:text-5xl text-gold italic animate-in fade-in slide-in-from-top duration-700">
               The Legacy Menu
             </DialogTitle>
             <p className="text-white/60 text-xs tracking-[0.4em] uppercase mt-2 font-bold animate-in fade-in duration-1000 delay-300">
@@ -62,10 +61,10 @@ export function MenuModal({ trigger }: { trigger: React.ReactNode }) {
           <Tabs defaultValue="baskets" className="flex flex-col h-full overflow-hidden">
             <div className="px-8 mt-4">
               <TabsList className="bg-white/5 w-full flex justify-between p-1 h-auto rounded-none border border-gold/20 animate-in fade-in zoom-in-95 duration-500">
-                <TabsTrigger value="baskets" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300">Baskets</TabsTrigger>
-                <TabsTrigger value="specialties" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300">Specialties</TabsTrigger>
-                <TabsTrigger value="appetizers" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300">Apps & Sides</TabsTrigger>
-                <TabsTrigger value="drinks" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300">Drinks</TabsTrigger>
+                <TabsTrigger value="baskets" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300 text-xs sm:text-sm">Baskets</TabsTrigger>
+                <TabsTrigger value="specialties" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300 text-xs sm:text-sm">Specialties</TabsTrigger>
+                <TabsTrigger value="appetizers" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300 text-xs sm:text-sm">Apps & Sides</TabsTrigger>
+                <TabsTrigger value="drinks" className="flex-1 rounded-none py-3 data-[state=active]:bg-gold data-[state=active]:text-navy font-bold uppercase tracking-wider transition-all duration-300 text-xs sm:text-sm">Drinks</TabsTrigger>
               </TabsList>
             </div>
 
@@ -81,11 +80,11 @@ export function MenuModal({ trigger }: { trigger: React.ReactNode }) {
                           style={{ animationDelay: `${index * 100}ms` }}
                         >
                           <div className="flex justify-between items-baseline gap-4">
-                            <h3 className="font-headline text-2xl text-white group-hover:text-gold transition-colors duration-300 leading-tight">
+                            <h3 className="font-headline text-xl md:text-2xl text-white group-hover:text-gold transition-colors duration-300 leading-tight">
                               {item.name}
                             </h3>
                             <div className="flex-1 border-b border-white/10 border-dotted mb-1 hidden sm:block"></div>
-                            <span className="text-gold font-bold text-xl">${item.price.toFixed(2)}</span>
+                            <span className="text-gold font-bold text-lg md:text-xl">${item.price.toFixed(2)}</span>
                           </div>
                           <p className="text-white/50 text-sm italic font-light group-hover:text-white/80 transition-colors duration-300">
                             {item.desc}
