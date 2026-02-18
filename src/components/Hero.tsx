@@ -9,12 +9,11 @@ export function Hero() {
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image 
-          src="https://picsum.photos/seed/legacy-lake/1920/1080" 
-          alt="Lakeside View at Legacy Grill" 
+          src="/LegacyBg.png" 
+          alt="Legacy Grill and Bar by The Lake" 
           fill 
           className="object-cover brightness-50"
           priority
-          data-ai-hint="lake sunset"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-transparent to-navy/80"></div>
       </div>
